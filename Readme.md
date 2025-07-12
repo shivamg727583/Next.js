@@ -29,9 +29,20 @@
  7. Would you like to use Turbopack for `next dev`? ... No / Yes
  8. Would you like to customize the import alias (`@/*` by default)? ... No / Yes
 
+
+ # Folder Structure
+
 # File based routing - All display pages or folder should be inside app folder
  - app > home > page.js /page.jsx  ->           http://localhost:3000/
  - app > about -> page.js/page.jsx   ->           http://localhost:3000/about
 
  
+- Page.jsx - for rendering any page
+- layout.jsx - common layout for a project
+- route rendering
 
+# Link - Use for navigate page 
+ <Link href= '/page' ></Link>
+
+ # Image - Used for image
+ 
