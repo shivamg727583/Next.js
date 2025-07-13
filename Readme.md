@@ -29,8 +29,7 @@
  7. Would you like to use Turbopack for `next dev`? ... No / Yes
  8. Would you like to customize the import alias (`@/*` by default)? ... No / Yes
 
-
- # Folder Structure
+ 
 
 # File based routing - All display pages or folder should be inside app folder
  - app > home > page.js /page.jsx  ->           http://localhost:3000/
@@ -40,6 +39,31 @@
 - Page.jsx - for rendering any page
 - layout.jsx - common layout for a project
 - route rendering
+
+* Dynamic Routing :- app -> [routeName] -> page.tsx (Folder name should be square bracket [])  - we can fetch using param (means parameter)
+
+
+# Server side Rendering vs Client side rendering
+- Server side rendering (SSR) - rendering on server side 
+- Client side rendering (CSR) - rendering on client side
+- Static site generation (SSG) - rendering on server side and then static html is generated and served from server.
+- Incremental static regeneration (ISR) - rendering on server side and then static html is generated and served from server and then it is updated on server side when there is any change in code.
+
+# Layout 
+- layout.js - common layout for a project
+
+- We can also make a layout.tsx page inside the page folder for specific page.
+
+# Error - Handling 
+- Make a custom `error.tsx` page inside `app folder` 
+- Use case : i. Use as `Throw Error("here error msg")`
+- Its excute nearest error.tsx file
+- let's suppose ,we have made 2 error one in app folder and another inside app>profile>error.tsx and when we add error in profile then , it will fetch error page of profile folder.
+
+# Loading :
+
+
+
 
 # Link - Use for navigate page 
  <Link href= '/page' ></Link>
