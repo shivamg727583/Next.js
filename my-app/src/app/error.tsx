@@ -1,6 +1,11 @@
 "use client"
 
-function error() {
+interface ErrorProps {
+  message?: string
+  code?: number | string
+}
+
+function ErrorPage({ message = "An unexpected error has occurred. Please try refreshing the page or come back later.", code }: ErrorProps) {
   return (
     <div style={{
       minHeight: '100vh',
@@ -19,7 +24,8 @@ function error() {
         <text x="60" y="75" textAnchor="middle" fontSize="60" fill="#fff" fontWeight="bold">!</text>
       </svg>
       <h1 style={{ fontSize: '2.5rem', marginBottom: 12 }}>Oops! Something went wrong.</h1>
-      <p style={{ fontSize: '1.2rem', marginBottom: 32 }}>An unexpected error has occurred. Please try refreshing the page or come back later.</p>
+      {code && <h2 style={{ fontSize: '1.5rem', marginBottom: 8 }}>Error Code: {code}</h2>}
+      <p style={{ fontSize: '1.2rem', marginBottom: 32 }}>{message}</p>
       <button
         onClick={() => window.location.reload()}
         style={{
@@ -46,4 +52,4 @@ function error() {
   )
 }
 
-export default error
+export default ErrorPage
